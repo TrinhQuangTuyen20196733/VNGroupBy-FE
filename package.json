@@ -1,0 +1,36 @@
+{
+  "name": "fe-vg",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/icons-material": "^5.11.16",
+    "antd": "^5.7.0",
+    "autoprefixer": "10.4.14",
+    "chromedriver": "^114.0.2",
+    "crypto-js": "^4.1.1",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.7",
+    "micro": "^10.0.1",
+    "next": "^13.4.9",
+    "postcss": "8.4.24",
+    "qrcode.react": "^3.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "reactstrap": "^9.2.0",
+    "selenium-webdriver": "^4.10.0",
+    "tailwindcss": "3.3.2",
+    "universal-cookie": "^4.0.4"
+  }
+}
