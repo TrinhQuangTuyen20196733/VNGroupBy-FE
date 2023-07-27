@@ -1,9 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import SearchBar from "./SearchBar";
 import Button from "./Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import SearchBar from "./SearchBar";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+
 export default function Header() {
   return (
     <div className="bg-primary-color  h-28 w-screen pl-20 flex justify-items-center items-center ">
@@ -17,10 +18,15 @@ export default function Header() {
 
         <SearchBar width="800px" />
         <div className="flex justify-items-center items-center gap-8">
+         <Link href="/InforCart" className="">
+          <Button>
           <FontAwesomeIcon
-            icon={faCartShopping}
-            className="text-white w-8 h-8"
-          />
+              icon={faCartShopping}
+              className="text-white w-8 h-8"
+              
+            />
+          </Button>
+         </Link>
           <Link href="/Login" className="">
             <Button
               text
