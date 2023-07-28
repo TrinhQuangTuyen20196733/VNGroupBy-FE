@@ -2,25 +2,30 @@ import { Button, Col, Row, Table } from 'antd';
 import React, { useState } from "react";
 
 import HomeLayout from "@/components/HomeLayOut";
+import Link from "next/link";
 
 const columns = [
   
   {
     title: '',
     dataIndex: '',
-},
-    {
-        title: 'Value Property',
-        dataIndex: 'value property',
-    },
-    {
-        title: 'Unit Price',
-        dataIndex: 'unit price',
-    },
-    {
-        title: 'Depoair',
-        dataIndex: 'depoair',
-    },
+  },
+  {
+    title: '',
+    dataIndex: '',
+  },
+  {
+    title: 'Value Property',
+    dataIndex: 'value property',
+  },
+  {
+    title: 'Unit Price',
+    dataIndex: 'unit price',
+  },
+  {
+    title: 'Depoair',
+    dataIndex: 'depoair',
+  },
   {
     title: 'Amount',
     dataIndex: 'amount',
@@ -77,9 +82,11 @@ export default function InforCart() {
           <h3 style={{fontSize: '20px',paddingLeft:'5px', textDecorationLine: 'underline', color:'#ff7f00' }} >đ</h3>
           </Col>
           <Col style={{display:'flex',paddingTop:'10px', fontSize:'20px', fontWeight:"400" }}  span={8}>
-            <Button style={{ fontSize:'15px', textAlign:'center', fontWeight:"600", width:'150px', height:'40px', color:'#fff', background:'#ff7f00' }} >
-              Pay Now
-            </Button>
+            <Link href="/UpdateCart" className="" >
+              <Button style={{ fontSize:'15px', textAlign:'center', fontWeight:"600", width:'150px', height:'40px', color:'#fff', background:'#ff7f00' }} >
+                Pay Now
+              </Button>
+            </Link>
           </Col>
           </Row>
         </Col>
@@ -99,7 +106,7 @@ export default function InforCart() {
           {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
         </span>
       </div>
-      <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+      <Table rowSelection={rowSelection} columns={columns} dataSource={data}  pagination={true } />
     </HomeLayout>
   );
 }
