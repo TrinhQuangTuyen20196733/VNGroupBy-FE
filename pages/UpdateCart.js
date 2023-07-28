@@ -105,7 +105,7 @@ export default function InforCart() {
           {hasSelected ? `Bạn đã chọn ${selectedRowKeys.length}` : ''}
         </span> */}
       </div>
-      <Table showHeader={true} rowSelection={rowSelection} columns={columns} dataSource={data} scroll={{y: 400}}  pagination={false } />
+      <Table showHeader={true} rowSelection={rowSelection} columns={columns} dataSource={data} scroll={{y: 300}}  pagination={false } />
       <Row style={{paddingTop:'30px'}}>
             <Col span={8}></Col>
             <Col span={8}></Col>
@@ -126,7 +126,6 @@ export default function InforCart() {
                                 width: '100%',
                             }}
                             placeholder="Please select"
-                            defaultValue={['a10', 'c12']}
                             onChange={handleChange}
                             options={options}
                             />
@@ -155,6 +154,56 @@ export default function InforCart() {
                 </Row>
             </Col>
       </Row>
+      <Row style={{ height:'200px'}} >
+           <Row style={{width:'100%', paddingTop:'30px', fontSize:'15px', fontWeight:'600'}}>
+           <span style={{fontSize:'20px', fontWeight:'600'}}>Payment methods</span>
+           <div style={{paddingLeft:'20px', color:'#f77f00'}}>
+                <Button style={{color:'#f77f00', border: '2px solid #f77f00'}}>Payment Vis Wallet</Button>
+           </div>
+           <div style={{paddingLeft:'20px'}}>
+                <Button>Payment On Delivery</Button>
+           </div>
+           </Row>
+           <Row style={{width:'100%', paddingTop:'15px', fontWeight:'500'}}>
+            <p style={{fontSize: '15px'}}>Watllet balace:</p>
+            <p style={{paddingLeft:'10px',fontSize: '15px', textDecorationLine: 'underline', color:'#ff7f00' }} >đ</p>
+            <p style={{fontSize: '15px', color:'#ff7f00' }}>0</p>
+           </Row>
+           <Row style={{width:'100%'}}>
+                <Col span={6}></Col>
+                <Col span={6}></Col>
+                <Col span={6}></Col>
+                <Col span={6}>
+                    <Row>
+                    <Col style={{fontSize:'15px',lineHeight: '3.0', fontWeight:'600'}}>
+                        <div>Category:</div>
+                        <div>Origin:</div>
+                        <div>Brand:</div>
+                        <div>Sent from:</div>
+                        <div>Warehouses:</div>
+                    </Col>
+                    <Col style={{ paddingLeft:'80px',fontSize:'15px',lineHeight: '3.0', fontWeight:'450'  }}>
+                        <div>Phones & accessories </div>
+                        <div>Viet Nam</div>
+                        <div>Apple</div>
+                        <div>Ha Noi</div>
+                        <div>149</div>
+                    </Col>
+                    </Row>
+                </Col>         
+               
+            </Row>
+        </Row>
+        <Row style={{paddingTop:"70px"}}>
+            <Col span={6}></Col>
+            <Col span={6}></Col>
+            <Col span={6}></Col>
+            <Col span={6} style={{display:'block'}}>
+                    <Row style={{width:'100%', paddingTop:'70px', fontSize:'20px', fontWeight:'600'}}>
+                    <Button style={{width:'250px', height:'40px',fontSize:'18px', fontWeight:'500',borderRadius:'20px', background:'#ff7f00', color:'#fff'}}>Puchase</Button>
+                    </Row>
+            </Col>
+        </Row>
     </HomeLayout>
   );
 }

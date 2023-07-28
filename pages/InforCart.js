@@ -103,7 +103,7 @@ export default function InforCart() {
             marginLeft: 8,
           }}
         >
-          {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
+          {hasSelected ? `Bạn đã chọn ${selectedRowKeys.length} ` : ''}
         </span>
       </div>
       <Table rowSelection={rowSelection} columns={columns} dataSource={data}  pagination={true } />
