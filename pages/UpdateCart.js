@@ -149,7 +149,7 @@ export default function InforCart() {
                     <Col style={{paddingLeft:'15px'}} span={8}>Total amount to pay :</Col>
                     <Row style={{fontSize:'20px'}}>
                     <h3 style={{textDecorationLine: 'underline', color:'#ff7f00' }} >đ</h3>
-                    <Col style={{paddingLeft:'5px',fontSize:'20px', color:'#ff7f00'}} span={8}> 67,475,000</Col>
+                    <Col style={{paddingLeft:'5px',fontSize:'20px',fontWeight:'bold', color:'#ff7f00'}} span={8}> 67,475,000</Col>
                     </Row>
                 </Row>
             </Col>
@@ -186,8 +186,18 @@ export default function InforCart() {
                         <div>Phones & accessories </div>
                         <div>Viet Nam</div>
                         <div>Apple</div>
-                        <div>Ha Noi</div>
-                        <div>149</div>
+                        <div>
+                            <Row style={{}}>
+                            <h3 style={{textDecorationLine: 'underline',fontWeight:'bold', color:'#ff7f00' }} >đ</h3>
+                            <Col style={{paddingLeft:'5px',fontWeight:'bold', color:'#ff7f00'}} span={8}> 67,475,000</Col>
+                            </Row>
+                        </div>
+                        <div>
+                            <Row style={{}}>
+                            <h3 style={{textDecorationLine: 'underline',fontWeight:'bold', color:'#ff7f00' }} >đ</h3>
+                            <Col style={{paddingLeft:'5px', fontWeight:'bold', color:'#ff7f00'}} span={8}> 67,475,000</Col>
+                            </Row>
+                        </div>
                     </Col>
                     </Row>
                 </Col>         
