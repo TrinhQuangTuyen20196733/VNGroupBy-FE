@@ -61,7 +61,7 @@ const items = [
   },
   getItem("Quản lý sản phẩm", "sub4", <InboxOutlined />, [
     getItem("Thông tin sản phẩm", "/Inforproduct"),
-    getItem("Cập nhật sản phẩm", "11"),
+    getItem("Cập nhật sản phẩm", "/OrderCart"),
     getItem("Option 12", "12"),
   ]),
   getItem(

@@ -73,19 +73,24 @@ export default function InforCart() {
     const hasSelected = selectedRowKeys.length > 0;
   return (
     <HomeLayout>
-      <div style={{width:'100%', height:'150px'}}>
-        <div style={{fontSize:'25px', color:'#ff7f00'}}  >
+         <div style={{fontSize:'25px', color:'#ff7f00'}}  >
             Addres to receive goods
         </div>
-       <Row style={{paddingTop:'15px'}}>
+      <Row>
+      <Col span={12} style={{width:'100%', height:'150px'}}>
+       <div style={{paddingTop:'15px'}}>
             <Col style={{fontWeight:'800',fontSize:'15px'}}>Nguyễn Minh Quân </Col>
-            <Col style={{paddingLeft:'10px',fontWeight:'800', fontSize:'15px'}}>033 444 2029</Col>
-            <Col style={{paddingLeft:'10px', fontSize:'15px', fontWeight: '600'}}>Thuong Thuy, Phu Phuong, Tay Ho, Ha Noi</Col>
-       </Row>
-        <Col style={{paddingTop:'15px', fontSize:'15px', fontWeight:'400'}}>
-        If you want to change address, place change default here and reload page
-        </Col>
-      </div>
+            <Col style={{fontWeight:'800', fontSize:'15px'}}>033 444 2029</Col>
+            <Col style={{fontSize:'15px', fontWeight: '600'}}>Thuong Thuy, Phu Phuong, Tay Ho, Ha Noi</Col>
+       </div>
+      </Col>
+      <Col span={12}>
+       <div style={{paddingTop:'15px', }}>
+            <Col style={{fontWeight:'800',fontSize:'15px'}}>Nguyễn Minh Quân </Col>
+            <Col style={{fontSize:'15px', fontWeight: '600'}}>Thuong Thuy, Phu Phuong, Tay Ho, Ha Noi</Col>
+       </div>
+      </Col>
+      </Row>
       <div
         style={{
           marginBottom: 10,
@@ -106,72 +111,38 @@ export default function InforCart() {
         </span> */}
       </div>
       <Table showHeader={true} rowSelection={rowSelection} columns={columns} dataSource={data} scroll={{y: 300}}  pagination={false } />
-      <Row style={{paddingTop:'30px'}}>
-            <Col span={8}></Col>
-            <Col span={8}></Col>
-            <Col span={8}>
-                <Row>
-                    <Col>Delivery:</Col>
-                    <Col span={6} style={{paddingLeft:'15px'}}>
-                        <Space
-                            style={{
-                            width: '100%',
-                            }}
-                            direction="vertical"
-                        >
-                            <Select
-                            mode="multiple"
-                            allowClear
-                            style={{
-                                width: '100%',
-                            }}
-                            placeholder="Please select"
-                            onChange={handleChange}
-                            options={options}
-                            />
-                        </Space>
-                    </Col>
-                    <Col style={{paddingLeft:'40px'}} span={8}>Shipping Free:</Col>
-                    <Row>
-                    <h3 style={{textDecorationLine: 'underline', color:'#ff7f00' }} >đ</h3>
-                    <Col span={8}> 25,000</Col>
-                    </Row>
-                </Row>
-            </Col>
-      </Row>
-      <Row style={{paddingTop:'20px'}}>
-            <Col span={8}></Col>
-            <Col span={8}></Col>
-            <Col span={8}>
-                <Row> 
-                    <Col></Col>
-                    <Col span={8}></Col>
-                    <Col style={{paddingLeft:'15px'}} span={8}>Total amount to pay :</Col>
-                    <Row style={{fontSize:'20px'}}>
-                    <h3 style={{textDecorationLine: 'underline', color:'#ff7f00' }} >đ</h3>
-                    <Col style={{paddingLeft:'5px',fontSize:'20px',fontWeight:'bold', color:'#ff7f00'}} span={8}> 67,475,000</Col>
-                    </Row>
-                </Row>
-            </Col>
-      </Row>
       <Row style={{ height:'200px'}} >
            <Row style={{width:'100%', paddingTop:'30px', fontSize:'15px', fontWeight:'600'}}>
-           <span style={{fontSize:'20px', fontWeight:'600'}}>Payment methods</span>
-           <div style={{paddingLeft:'20px', color:'#f77f00'}}>
-                <Button style={{color:'#f77f00', border: '2px solid #f77f00'}}>Payment Vis Wallet</Button>
-           </div>
-           <div style={{paddingLeft:'20px'}}>
-                <Button>Payment On Delivery</Button>
-           </div>
-           </Row>
-           <Row style={{width:'100%', paddingTop:'15px', fontWeight:'500'}}>
-            <p style={{fontSize: '15px'}}>Watllet balace:</p>
-            <p style={{paddingLeft:'10px',fontSize: '15px', textDecorationLine: 'underline', color:'#ff7f00' }} >đ</p>
-            <p style={{fontSize: '15px', color:'#ff7f00' }}>0</p>
+           {/* <Col style={{color:'#808080',fontSize:'15px',lineHeight: '2.0'}} span={8}>
+                    <div>Category:</div>
+                    <div>Origin:</div>
+                    <div>Brand:</div>
+                    <div>Sent from:</div>
+                    <div>Warehouses:</div>
+                </Col>
+                <Col style={{fontSize:'15px',lineHeight: '2.0', fontWeight:'450'  }}>
+                    <div>Phones & accessories </div>
+                    <div>Viet Nam</div>
+                    <div>Apple</div>
+                    <div>Ha Noi</div>
+                    <div>149</div>
+                </Col> */}
            </Row>
            <Row style={{width:'100%'}}>
-                <Col span={6}></Col>
-                <Col span={6}></Col>
+           <Col style={{color:'#808080',fontSize:'15px',lineHeight: '3.0'}} span={6}>
+                    <div>Category:</div>
+                    <div>Origin:</div>
+                    <div>Brand:</div>
+                    <div>Sent from:</div>
+                    <div>Warehouses:</div>
+                </Col>
+                <Col span={6} style={{ padding:'30pxx', fontSize:'15px',lineHeight: '3.0', fontWeight:'450'  }}>
+                    <div>Phones & accessories </div>
+                    <div>Viet Nam</div>
+                    <div>Apple</div>
+                    <div>Ha Noi</div>
+                    <div>149</div>
+                </Col>
                 <Col span={6}></Col>
                 <Col span={6}>
                     <Row>
@@ -200,8 +171,7 @@ export default function InforCart() {
                         </div>
                     </Col>
                     </Row>
-                </Col>         
-               
+                </Col>           
             </Row>
         </Row>
         <Row style={{paddingTop:"70px"}}>
@@ -210,7 +180,7 @@ export default function InforCart() {
             <Col span={6}></Col>
             <Col span={6} style={{display:'block'}}>
                     <Row style={{width:'100%', paddingTop:'70px', fontSize:'20px', fontWeight:'600'}}>
-                    <Button style={{width:'250px', height:'40px',fontSize:'18px', fontWeight:'500',borderRadius:'20px', background:'#ff7f00', color:'#fff'}}>Puchase</Button>
+                    <Button style={{width:'220px', height:'60px',fontSize:'18px', fontWeight:'500',borderRadius:'20px', background:'#ff7f00', color:'#fff'}}>Puchase</Button>
                     </Row>
             </Col>
         </Row>
