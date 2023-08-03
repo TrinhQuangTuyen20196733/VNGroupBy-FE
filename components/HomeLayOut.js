@@ -3,15 +3,18 @@ import {
   LaptopOutlined,
   NotificationOutlined,
   UserOutlined,
+  ShopOutlined,
+  UnorderedListOutlined,
+  FundOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, theme } from "antd";
 import Header from "@/components/Header";
 
 import {
-  AppstoreOutlined,
+  ShoppingCartOutlined,
   MailOutlined,
-  SettingOutlined,
   WalletOutlined,
+  ShoppingOutlined,
 } from "@ant-design/icons";
 import { useRouter } from "next/router";
 const { Content, Footer, Sider } = Layout;
@@ -46,7 +49,7 @@ function getItem(label, key, icon, children, type, url) {
 }
 const items = [
   getItem("Tài khoản", "sub1", <MailOutlined />, [
-    getItem("Địa chỉ giao hàng", "5"),
+    getItem("Địa chỉ giao hàng", "/ShippingAddress"),
     getItem("Chỉnh sửa tài khoản", "/UpdateAccount"),
     getItem("Đổi mật khẩu ", "/UpdatePassword"),
   ]),
@@ -57,18 +60,20 @@ const items = [
   {
     type: "divider",
   },
-  getItem("Navigation Three", "sub4", <SettingOutlined />, [
-    getItem("Option 10", "10"),
-    getItem("Option 11", "11"),
-    getItem("Option 12", "12"),
+  getItem("Thông tin shop", "/ShopInfo", <ShopOutlined />),
+  getItem("Thông tin sản phẩm ", "sub4", <ShoppingOutlined />, [
+    getItem("Thêm mới sản phẩm", "/AddProduct"),
+    getItem("Danh sách sản phẩm", "/ProductList"),
   ]),
-  getItem(
-    "Group",
-    "grp",
-    null,
-    [getItem("Option 13", "13"), getItem("Option 14", "14")],
-    "group"
-  ),
+  getItem("Quản lý giỏ hàng ", "sub9", <ShoppingCartOutlined />, [
+    getItem("Xem giỏ hàng", "/CartInfor"),
+  ]),
+  getItem("Thông tin đơn hàng", "/OrderInfor", <UnorderedListOutlined />),
+  getItem("Thông tin đơn đặt hàng", "/ShopOrder", <UnorderedListOutlined />),
+  getItem("Quản lý chiến dịch ", "sub900", <FundOutlined />, [
+    getItem("Tạo mới chiến dịch", "/AddCampaign"),
+    getItem("Danh sách chiến dịch", "/CampaignList"),
+  ]),
 ];
 const HomeLayout = ({ children }) => {
   const {

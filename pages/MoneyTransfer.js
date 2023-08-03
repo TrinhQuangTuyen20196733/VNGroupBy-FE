@@ -44,7 +44,7 @@ export default function MoneyTransfer() {
         setData(data.data);
       })
       .catch((error) => {
-        alert(error);
+        console.log(error);
       });
   }, []);
   return (
