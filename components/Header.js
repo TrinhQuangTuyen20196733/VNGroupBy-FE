@@ -1,12 +1,11 @@
+import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
+import SearchBar from "./SearchBar";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import SearchBar from "./SearchBar";
 import Button from "./Button";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import fetchAPI from "@/utils/fetchAPI";
-import { Badge } from "antd";
 export default function Header() {
   const [cartCount, setCartCount] = useState(0);
   useEffect(() => {

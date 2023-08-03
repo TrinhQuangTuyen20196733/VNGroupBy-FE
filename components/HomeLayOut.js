@@ -1,4 +1,10 @@
-import React from "react";
+import {
+  AppstoreOutlined,
+  InboxOutlined,
+  MailOutlined,
+  SettingOutlined,
+  WalletOutlined,
+} from "@ant-design/icons";
 import {
   LaptopOutlined,
   NotificationOutlined,
@@ -8,7 +14,6 @@ import {
   FundOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, theme } from "antd";
-import Header from "@/components/Header";
 
 import {
   ShoppingCartOutlined,
@@ -17,6 +22,7 @@ import {
   ShoppingOutlined,
 } from "@ant-design/icons";
 import { useRouter } from "next/router";
+
 const { Content, Footer, Sider } = Layout;
 const items2 = [
   UserOutlined,
