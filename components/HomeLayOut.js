@@ -1,11 +1,4 @@
 import {
-  AppstoreOutlined,
-  InboxOutlined,
-  MailOutlined,
-  SettingOutlined,
-  WalletOutlined,
-} from "@ant-design/icons";
-import {
   LaptopOutlined,
   NotificationOutlined,
   UserOutlined,
@@ -22,28 +15,9 @@ import {
   ShoppingOutlined,
 } from "@ant-design/icons";
 import { useRouter } from "next/router";
-
+import Header from "./Header";
 const { Content, Footer, Sider } = Layout;
-const items2 = [
-  UserOutlined,
-  LaptopOutlined,
-  NotificationOutlined,
-  WalletOutlined,
-].map((icon, index) => {
-  const key = String(index + 1);
-  return {
-    key: `sub${key}`,
-    icon: React.createElement(icon),
-    label: `subnav ${key}`,
-    children: new Array(4).fill(null).map((_, j) => {
-      const subKey = index * 4 + j + 1;
-      return {
-        key: subKey,
-        label: `option${subKey}`,
-      };
-    }),
-  };
-});
+
 function getItem(label, key, icon, children, type, url) {
   return {
     key,
